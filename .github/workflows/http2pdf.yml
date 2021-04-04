@@ -13,9 +13,10 @@ jobs:
           htmlFile: ./index.html
           outputFile: ./cv.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
-      - run: ls
-      - uses: ncipollo/release-action@v1
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          artifacts: "./cv.pdf"
-          token: ${{ secrets.TOKEN }}
-          tag: "CV"
+          repo_token: "${{ secrets.TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "CV"
+          files: ./cv.pdf
