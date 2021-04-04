@@ -1,9 +1,6 @@
 name: CV-build
 
-on: 
-  push:
-    tags:
-    - '*'
+on: push
 
 jobs:
   build:
@@ -21,3 +18,4 @@ jobs:
         with:
           artifacts: "./cv.pdf"
           token: ${{ secrets.TOKEN }}
+          tag: "CV"
