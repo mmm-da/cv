@@ -3,7 +3,8 @@ name: cv-builder
 on: push
 
 jobs: 
-  - name: HTML to PDF
+  HTML-to-PDF:
+    name: HTML to PDF
     uses: fifsky/html-to-pdf-action@master
     with:
       htmlFile: ./index.html
