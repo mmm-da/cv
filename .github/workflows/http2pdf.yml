@@ -15,6 +15,7 @@ jobs:
           htmlFile: ./index.html
           outputFile: ./cv.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+      - run: ls
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "./cv.pdf"
